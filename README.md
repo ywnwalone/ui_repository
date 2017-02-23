@@ -4,3 +4,4 @@
 
 1. On/Off Switch
 2. Radio Trick
+3. Pure CSS Icon
