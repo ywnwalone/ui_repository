@@ -1,0 +1,302 @@
+*{
+	outline:none;
+	padding:0;
+	margin:0;
+}
+
+body{
+	background:#313131;
+}
+
+header{
+	position:absolute;
+	top:0;left:0;right:0;
+	height:180px;
+	background: #454545;
+
+}
+
+header > h1{
+	position:absolute;
+	top:20px;
+	left:20px;
+	color:white;
+}
+header > h4{
+	position:absolute;
+	top:70px;
+	left:40px;
+	color:lightgray;
+}
+content{
+	position:absolute;
+	top:180px;left:0;right:0;
+	min-height:200px;
+	text-align: center;
+	padding-left:10px;
+	padding-right:10px;
+}
+box{
+	display:flex;
+	border:1px solid lightgray;
+
+	max-width:600px;
+	height:60px;
+
+	flex-direction: row;
+	margin:auto;
+	margin-top:10px;
+}
+
+box-name{
+	min-width:100px;
+	color:white;
+	font-size:10pt;
+	flex-grow:4;
+	margin:auto;
+
+	text-align: center;
+
+}
+box-content{
+	display:flex;
+
+	flex-grow:4;
+}
+
+
+.check_mark{
+	position: relative;
+	display:inline-block;
+	border:4px solid lightgreen;
+	width:40px;
+	height:40px;
+	border-radius: 100%;
+	margin:auto;
+	cursor:pointer;
+}
+
+.check_mark::before{
+	position: absolute;
+
+	content:'';
+	border-bottom:4px solid lightgreen;
+	border-left:4px solid lightgreen;
+	left:0;right:0;top:8px;
+	margin:auto;
+	width:22px;
+	height:11px;
+	transform: rotate(-45deg)
+}
+
+.check_mark:hover{
+	background: lightgreen;
+}
+
+.check_mark:hover::before{
+	border-bottom:4px solid #454545;
+	border-left:4px solid #454545;
+}
+
+
+
+.x_mark{
+	position:relative;
+	display:inline-block;
+	border:4px solid tomato;
+	width:40px;
+	height:40px;
+	border-radius: 100%;
+	margin:auto;
+	cursor:pointer;
+}
+.x_mark::before{
+	content:'';
+	position:absolute;
+	top:0;left:0;right:0;bottom:0;
+	margin:auto;
+	width:30px;
+	height:4px;
+	background: tomato;
+	transform: rotate(45deg);
+	transition:transform 0.5s;
+}
+.x_mark::after{
+	content:'';
+	position:absolute;
+	top:0;left:0;right:0;bottom:0;
+	margin:auto;
+	width:30px;
+	height:4px;
+	background: tomato;
+	transform: rotate(-45deg);
+	transition:transform 0.5s;
+}
+
+.x_mark:hover{
+	background: tomato;
+}
+.x_mark:hover::before{
+	background: #454545;
+}
+.x_mark:hover::after{
+	background: #454545;
+}
+
+.x_mark:active{
+	
+}
+.x_mark:hover::before{
+	height:6px;
+	transform:rotate(-90deg);
+}
+.x_mark:hover::after{
+	height:6px;
+	transform:rotate(180deg);
+}
+
+
+
+.list_mark{
+	position:relative;
+	display:inline-block;
+	border:4px solid #fff;
+	width:40px;
+	height:40px;
+	border-radius: 100%;
+	margin:auto;
+	cursor:pointer;
+}
+
+.list_mark > span{
+	position:absolute;
+	top:0;left:0;bottom:0;right:0;
+	margin:auto;
+	width:20px;
+	height:3px;
+	background: white;
+	border-radius: 1px;
+}
+.list_mark > span::before{
+	position:absolute;
+	content:'';
+	width:20px;
+	height:3px;
+	background: white;
+	left:0;
+	top:-7px;
+	border-radius: 1px;
+}
+.list_mark > span::after{
+	position:absolute;
+	content:'';
+	width:20px;
+	height:3px;
+	background: white;
+	left:0;
+	top:7px;
+	border-radius: 1px;
+}
+
+.list_mark:hover{
+	background: white;
+}
+
+.list_mark:hover > span{
+	background: #454545;
+}
+.list_mark:hover > span::before{
+	background: #454545;
+}
+.list_mark:hover > span::after{
+	background: #454545;
+}
+
+
+.forbidden_mark{
+	position:relative;
+	display:inline-block;
+	border:6px solid red;
+	width:34px;
+	height:34px;
+	border-radius: 100%;
+	margin:auto;
+	cursor:pointer;
+}
+.forbidden_mark::before{
+	position:absolute;
+	top:0;left:0;bottom:0;right:0;
+	margin:auto;
+	content:'';
+	width:34px;
+	height:6px;
+	background: red;
+	transform: rotate(45deg);
+	transition: all 0.5s;
+}
+
+.forbidden_mark:hover::before{
+	transform:rotate(315deg);
+}
+
+
+.arrow_mark{
+	position:relative;
+	display:inline-block;
+	border:4px solid #fff;
+	width:40px;
+	height:40px;
+	border-radius: 100%;
+	margin:auto;
+	cursor:pointer;
+}
+.arrow_mark::before{
+	position:absolute;
+	border-right:4px solid white;
+	border-bottom:4px solid white;
+	content:'';
+	width:12px;
+	height:12px;
+	top:0;left:0;right:0;bottom:0;
+	margin:auto;
+	transform: rotate(-45deg);
+	transition: all 0.5s;
+}
+
+
+
+.arrow_mark:hover::before{
+	transform:rotate(315deg);
+}
+
+.search_mark{
+	position:relative;
+	display:inline-block;
+	border:4px solid #fad300;
+	width:40px;
+	height:40px;
+	border-radius: 100%;
+	margin:auto;
+	cursor:pointer;
+}
+
+.search_mark::before{
+	position:absolute;
+	content:'';
+	width:16px;
+	height:16px;
+	border:2px solid #fad300;
+	border-radius: 100%;
+	left:6px;
+	top:6px;
+}
+.search_mark::after{
+	position:absolute;
+	content:'';
+	bottom:12px;
+	right:8px;
+	width:12px;
+	height:2px;
+	background: #fad300;
+	transform: rotate(45deg);
+}
