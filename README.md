@@ -5,4 +5,7 @@
 1. On/Off Switch
 2. Radio Trick
 3. Pure CSS Icon
-4. Input UI
+
+# Pure CSS Icon
+
+![Pure Css Icon](https://github.com/ywnwalone/ui_repository/raw/master/doc/pure_css_icon.PNG)
