@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>\\</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no
+    initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<link rel='stylesheet' href='/stylesheets/css_animation.css' />
+
+</head>
+<body>
+  <script>
+  (function (global) {
+
+    function read(elem, unit) {
+        elem.style.width = '1' + unit;
+
+        var val = document.defaultView
+            .getComputedStyle(elem, null)
+            .getPropertyValue('width');
+
+        return parseFloat(val);
+    }
+
+    function init() {
+        var body = document.getElementsByTagName('body');
+
+        if (body.length === 0) {
+            document.addEventListener('DOMContentLoaded', init);
+            return;
+        } else {
+            body = body[0];
+        }
+
+        var elem = document.createElement('div');
+        body.appendChild(elem);
+
+        global.dpi = read(elem, 'in');
+        global.dpcm = read(elem, 'cm');
+
+        body.removeChild(elem);
+    }
+
+    init();
+
+}(window));
+  alert(window.dpi);
+  alert(window.dpcm);
+  </script>
+	<header>
+		<h1>CSS ANIMATION</h1>
+		<h4>(HTML, CSS)</h4>
+	</header>
+	<content>
+
+    <box>
+      <box-name>
+        <p>loading-dot</p>
+      </box-name>
+      <box-body>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+      </box-body>
+    </box>
+    <box>
+      <box-name>
+        <p>loading-square</p>
+      </box-name>
+      <box-body>
+        <div class="clock"></div>
+        <div class="clock"></div>
+        <!-- <div class="clock"></div>
+        <div class="clock"></div> -->
+      </box-body>
+    </box>
+    <box>
+      <box-name>
+        <p>loading-square</p>
+      </box-name>
+      <box-body>
+        <div class="google">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- <div class="clock"></div>
+        <div class="clock"></div> -->
+      </box-body>
+    </box>
+
+
+	</content>
+</body>
+</html>

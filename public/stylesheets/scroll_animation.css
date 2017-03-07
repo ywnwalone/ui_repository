@@ -1,0 +1,225 @@
+
+
+body{
+  height:2000px;
+}
+
+.red{
+  background-color:red;
+}
+.blue{
+  background-color: blue;
+}
+.green{
+  background-color: green;
+}
+.pink{
+  background-color: pink;
+}
+
+
+
+.square{
+  margin:auto;
+  width:400px;
+  height:400px;
+  text-align: center;
+  line-height: 400px;
+  color:white;
+  font-size:16pt;
+}
+
+.circle{
+  margin:auto;
+  width:600px;
+  height:600px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 600px;
+  color:white;
+  font-size:16pt;
+}
+
+.rectangle{
+  margin:auto;
+  width:300px;
+  height:700px;
+  text-align: center;
+  line-height: 700px;
+  color:white;
+  font-size:16pt;
+}
+
+
+
+.slideLeftToRight{
+  animation: slideLeftToRight 1s;
+}
+.slideRightToLeft{
+  animation: slideRightToLeft 1s;
+}
+.slideTopToBottom{
+  animation: slideTopToBottom 1s;
+}
+.slideBottomToTop{
+  animation: slideBottomToTop 1s;
+}
+.fadein{
+  animation: fadein 1s;
+}
+.fadeinDown{
+  animation: fadeinDown 1s;
+}
+.fadeinUp{
+  animation: fadeinUp 1s;
+}
+.fadeinLeft{
+  animation: fadeinLeft 1s;
+}
+.fadeinRight{
+  animation: fadeinRight 1s;
+}
+.fadeinScaleUp{
+  animation: fadeinScaleUp 1s;
+}
+.fadeinScaleDown{
+  animation: fadeinScaleDown 1s;
+}
+
+.animatable{
+  visibility: hidden;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.animated{
+  visibility: visible;
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+
+@keyframes slideLeftToRight {
+  0%{
+    transform:translateX(-800px);
+  }
+  100%{
+    /*애니메이션 끝나는 위치*/
+    transform:translateX(0px);
+  }
+}
+@keyframes slideRightToLeft {
+  0%{
+    transform:translateX(800px);
+  }
+  100%{
+    /*애니메이션 끝나는 위치*/
+    transform:translateX(0px);
+  }
+}
+@keyframes slideTopToBottom {
+  0%{
+    transform:translateY(-1600px);
+  }
+  100%{
+    /*애니메이션 끝나는 위치*/
+    transform:translateY(0px);
+  }
+}
+@keyframes slideBottomToTop {
+  0%{
+    transform:translateY(1600px);
+  }
+  100%{
+    /*애니메이션 끝나는 위치*/
+    transform:translateY(0px);
+  }
+}
+
+@keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinDown {
+  0%{
+    opacity: 0;
+    /*애니메이션 끝나는 위치*/
+    transform:translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    /*애니메이션 끝나는 위치*/
+    transform:translateY(0px);
+  }
+}
+@keyframes fadeinUp {
+  0%{
+    opacity: 0;
+    /*애니메이션 끝나는 위치*/
+    transform:translateY(100px);
+  }
+  100%{
+    opacity: 1;
+    /*애니메이션 끝나는 위치*/
+    transform:translateY(0px);
+  }
+}
+@keyframes fadeinLeft {
+  0%{
+    opacity: 0;
+    /*애니메이션 끝나는 위치*/
+    transform:translateX(-100px);
+  }
+  100%{
+    opacity: 1;
+    /*애니메이션 끝나는 위치*/
+    transform:translateX(0px);
+  }
+}
+@keyframes fadeinRight {
+  0%{
+    opacity: 0;
+    /*애니메이션 끝나는 위치*/
+    transform:translateX(100px);
+  }
+  100%{
+    opacity: 1;
+    /*애니메이션 끝나는 위치*/
+    transform:translateX(0px);
+  }
+}
+
+@keyframes fadeinScaleUp {
+  0%{
+    opacity: 0;
+    /*애니메이션 끝나는 위치*/
+    transform:scale(0.6);
+  }
+  100%{
+    opacity: 1;
+    /*애니메이션 끝나는 위치*/
+    transform:scale(1);
+  }
+}
+@keyframes fadeinScaleDown {
+  0%{
+    opacity: 0;
+    /*애니메이션 끝나는 위치*/
+    transform:scale(1.6);
+  }
+  100%{
+    opacity: 1;
+    /*애니메이션 끝나는 위치*/
+    transform:scale(1);
+  }
+}
